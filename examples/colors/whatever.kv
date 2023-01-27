@@ -1,0 +1,49 @@
+#:import utils kivy.utils
+<MyGridLayout>
+    name: name
+    pizza: pizza
+    color: color
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+        GridLayout:
+            cols:2
+            size_hint_y: None
+            height: 150
+            Label:
+                text: "Name"
+                size_hint_y: None
+                height: 50
+            TextInput:
+                id: name
+                multiline: False
+                size_hint_y: None
+                height: 50
+
+            Label:
+                text: "Favorite Pizza"
+                size_hint_y: None
+                height: 50
+            TextInput:
+                id: pizza
+                multiline: False
+                size_hint_y: None
+                height: 50
+
+            Label:
+                text: "Favorite Color"
+                size_hint_y: None
+                height: 50
+            TextInput:
+                id: color
+                multiline: False
+                size_hint_y: None
+                height: 50
+        Button:
+            on_press:root.press()
+            text: "Submit"
+            font_size: 32
+            size_hint_y: None
+            height: 50
+            background_normal: ''
+            background_color: utils.get_color_from_hex('#eefa00')

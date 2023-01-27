@@ -1,0 +1,90 @@
+MDFloatLayout:
+    MDGridLayout:
+        size_hint: 0.5, 0.5
+        pos_hint: {"center_x": 0.5, "center_y": 0.7}
+        cols: 3
+        rows: 3
+        Button:
+            id: btn1
+            x_coordinate: 0
+            y_coordinate: 0
+            text: ""
+            font_size: "45sp"
+            on_release: app.presser(btn1)
+
+        Button:
+            id: btn2
+            x_coordinate: 1
+            y_coordinate: 0
+            text: ""
+            font_size: "45sp"
+            on_release: app.presser(btn2)
+
+        Button:
+            id: btn3
+            x_coordinate: 2
+            y_coordinate: 0
+            text: ""
+            font_size: "45sp"
+            on_release: app.presser(btn3)
+
+        Button:
+            id: btn4
+            x_coordinate: 0
+            y_coordinate: 1
+            text: ""
+            font_size: "45sp"
+            on_release: app.presser(btn4)
+
+        Button:
+            id: btn5
+            x_coordinate: 1
+            y_coordinate: 1
+            text: ""
+            font_size: "45sp"
+            on_release: app.presser(btn5)
+
+        Button:
+            id: btn6
+            x_coordinate: 2
+            y_coordinate: 1
+            text: ""
+            font_size: "45sp"
+            on_release: app.presser(btn6)
+
+        Button:
+            id: btn7
+            x_coordinate: 0
+            y_coordinate: 2
+            text: ""
+            font_size: "45sp"
+            on_release: app.presser(btn7)
+
+        Button:
+            id: btn8
+            x_coordinate: 1
+            y_coordinate: 2
+            text: ""
+            font_size: "45sp"
+            on_release: app.presser(btn8)
+
+        Button:
+            id: btn9
+            x_coordinate: 2
+            y_coordinate: 2
+            text: ""
+            font_size: "45sp"
+            on_release: app.presser(btn9)
+
+    MDLabel:
+        id: score
+        font_size: "32sp"
+        text: "X Goes First!"
+        halign: "center"
+        pos_hint: {"center_y": 0.3}
+
+    MDRaisedButton:
+        id: restart
+        text: "Restart the Game"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.15}
+        on_release: app.restart()

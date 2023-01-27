@@ -1,0 +1,46 @@
+#:import utils kivy.utils
+<MyLayout>
+    MDBoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        MDScreen:
+            MDCard:
+                orientation: "vertical"
+                padding: "8dp"
+                size_hint: None, None
+                size: "280dp", "180dp"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                MDLabel:
+                    text: "Title"
+                    theme_text_color: "Primary"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDSeparator:
+                    height: "1dp"
+
+                MDLabel:
+                    text: "BODY"
+
+                MDIconButton:
+                    icon: "language-python"
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                MDFlatButton:
+                    text: "MDFlatButton"
+                    font_size: "18sp"
+                    md_bg_color: "blue"
+
+                MDRaisedButton:
+                    text: "MDRaisedButton"
+                    font_size: "18sp"
+                    md_bg_color: app.theme_cls.primary_dark
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+        MDScreen:
+            MDSlider:
+                min: 0
+                max: 100
+                value: 50
